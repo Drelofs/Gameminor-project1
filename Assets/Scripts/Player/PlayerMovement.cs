@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
 
     private float horizontal;
     private float speed = 8f;
@@ -19,12 +20,22 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
         if(Input.GetButtonDown("Jump") && IsGrounded()){
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animator.SetBool("IsJumping", true);
         }
         if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f){
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+        if (!IsGrounded()){
+            animator.SetBool("IsJumping", true);
+        }
+        if (IsGrounded())
+        {
+            animator.SetBool("IsJumping", false);
+        };
         Flip();
     }
 
