@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public Joystick joystick;
+
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
@@ -17,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontal = joystick.Horizontal;
         horizontal = Input.GetAxisRaw("Horizontal");
-
         if(Input.GetButtonDown("Jump") && IsGrounded()){
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
