@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         //Die animation
 
         //Disable the enemy
-        GetComponent<Collider2D>().enabled = false;
+        //GetComponent<Collider2D>().enabled = false;
         GetComponent <AIPath>().enabled = false;
         this.enabled = false;
 

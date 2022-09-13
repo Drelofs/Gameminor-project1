@@ -13,7 +13,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public int attackDamage = 40;
     public float attackRate = 2;
-    float nextAttackTime = 0f;
+    public float nextAttackTime = 0f;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void Attack(){
+    public void Attack(){
         //Play an attack animation
          animator.SetTrigger("Attack");
         //Detect enemies in range of attack
@@ -35,6 +35,11 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies){
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        animator.SetTrigger("IsHurt");
     }
 
     void OnDrawGizmosSelected() {
