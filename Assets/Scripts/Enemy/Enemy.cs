@@ -6,6 +6,7 @@ using Pathfinding;
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
+    public Animator anim;
     int currentHealth;
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,8 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
 
         //Play hurt animation
-
-        if(currentHealth <= 0){
+        anim.SetBool("isHit", true);
+        if (currentHealth <= 0){
             Die();
         }
     }
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
 
         Debug.Log("Enemy died!");
         //Die animation
-
+        anim.SetBool("isDead", true);
         //Disable the enemy
         //GetComponent<Collider2D>().enabled = false;
         GetComponent <AIPath>().enabled = false;

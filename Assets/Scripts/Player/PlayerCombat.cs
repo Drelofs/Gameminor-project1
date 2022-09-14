@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
 
     public Animator animator;
 
@@ -14,6 +18,12 @@ public class PlayerCombat : MonoBehaviour
     public int attackDamage = 40;
     public float attackRate = 2;
     public float nextAttackTime = 0f;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     // Update is called once per frame
     void Update()
@@ -40,6 +50,9 @@ public class PlayerCombat : MonoBehaviour
     public void TakeDamage(int damage)
     {
         animator.SetTrigger("IsHurt");
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
     }
 
     void OnDrawGizmosSelected() {

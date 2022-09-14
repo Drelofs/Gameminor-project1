@@ -24,7 +24,8 @@ public class EnemyBehaviour : MonoBehaviour
     private bool cooling;
     private float intTimer;
     private PlayerCombat playerCombat;
-    
+    private bool isDone = false;
+
     #endregion
 
     void Awake()
@@ -32,7 +33,6 @@ public class EnemyBehaviour : MonoBehaviour
         intTimer = timer;
         anim = GetComponent<Animator>();
     }
-
 
     void Update()
     {
@@ -79,13 +79,18 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else if(attackDistance >= distance && cooling == false)
         {
-            Attack();
+            if (!isDone)
+            {
+                Attack();
+                isDone = true;
+            }
 
         }
 
         if (cooling)
         {
             Cooldown();
+            isDone = false;
             anim.SetBool("Attack", false);
         }
     }
@@ -101,7 +106,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Attack()
     {
-
+        Debug.Log("Attacking!");
         playerCombat = player.GetComponent<PlayerCombat>();
         playerCombat.TakeDamage(20);
         timer = intTimer; // Reset time when player enters attack Range
