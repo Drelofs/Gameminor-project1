@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
+    public Joystick joystick;
+    public Button button;
 
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 16f;
+    public float jumpingPower = 32f;
     private bool isFacingRight = true;
 
     private bool canDash = true;
@@ -28,29 +31,36 @@ public class PlayerMovement : MonoBehaviour
         if (isDashing){
             return;
         }
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = joystick.Horizontal;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if(Input.GetButtonDown("Jump") && IsGrounded()){
+        Flip();
+    }
+
+    public void Jump()
+    {
+        if (IsGrounded())
+        {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             animator.SetBool("IsJumping", true);
         }
-        if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f){
+        if (rb.velocity.y > 0f)
+        {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !IsGrounded())
         {
             StartCoroutine(Dash());
         }
-        if (!IsGrounded()){
+        if (!IsGrounded())
+        {
             animator.SetBool("IsJumping", true);
         }
         if (IsGrounded())
         {
             animator.SetBool("IsJumping", false);
         };
-        Flip();
     }
 
     private void FixedUpdate() {
