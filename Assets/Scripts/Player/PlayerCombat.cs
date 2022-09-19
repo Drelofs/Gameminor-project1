@@ -28,18 +28,12 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Time.time >= nextAttackTime){
-        //    if (Input.GetMouseButtonDown(0))
-        //    {
-        //        Attack();
-        //        nextAttackTime = Time.time + 1f / attackRate;
-        //    }
-        //}
+
     }
 
     public void Attack(){
-        if (Time.time >= nextAttackTime)
-        {
+        //if (Time.time >= nextAttackTime)
+        //{
             //Play an attack animation
             animator.SetTrigger("Attack");
             //Detect enemies in range of attack
@@ -47,10 +41,14 @@ public class PlayerCombat : MonoBehaviour
             //Damage them
             foreach (Collider2D enemy in hitEnemies)
             {
-                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+                Debug.Log("found enemy: " + enemy.gameObject.name, enemy.gameObject);
+                if (enemy.TryGetComponent<Enemy>(out Enemy enemyScript))
+                {
+                    enemyScript.GetComponent<Enemy>().TakeDamage(attackDamage);
+                }
             }
-        }
-        nextAttackTime = Time.time + 1f / attackRate;
+        //}
+        //nextAttackTime = Time.time + 1f / attackRate;
     }
 
     public void TakeDamage(int damage)

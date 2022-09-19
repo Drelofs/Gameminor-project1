@@ -12,12 +12,12 @@ public class EnemyBehaviour : MonoBehaviour
     public float attackDistance; //Minimum istance to attack
     public float moveSpeed;
     public float timer; //Timer for cooldown between attacks
+    public Animator anim;
     #endregion
 
     #region Private Variables
     private RaycastHit2D hit;
     private GameObject target;
-    private Animator anim;
     private float distance;
     private bool attackMode;
     private bool inRange;
@@ -31,7 +31,6 @@ public class EnemyBehaviour : MonoBehaviour
     void Awake()
     {
         intTimer = timer;
-        anim = GetComponent<Animator>();
     }
 
     void Update()

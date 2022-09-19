@@ -6,6 +6,7 @@ using Pathfinding;
 public class EnemyGFX : MonoBehaviour
 {
     public AIPath aiPath;
+    public SpriteRenderer spriteRenderer;
 
     //[SerializeField] SpriteRenderer spriteRenderer;
 
@@ -14,11 +15,11 @@ public class EnemyGFX : MonoBehaviour
     {
         if(aiPath.desiredVelocity.x >= 0.01f)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            spriteRenderer.flipX = true;
         }
         else if(aiPath.desiredVelocity.x <= -0.01f)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            spriteRenderer.flipX = false;
         }
     }
 }

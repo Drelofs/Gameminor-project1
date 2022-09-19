@@ -35,6 +35,15 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
+        if (!IsGrounded())
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        if (IsGrounded())
+        {
+            animator.SetBool("IsJumping", false);
+        };
+
         Flip();
     }
 
@@ -49,18 +58,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !IsGrounded())
-        {
-            StartCoroutine(Dash());
-        }
-        if (!IsGrounded())
-        {
-            animator.SetBool("IsJumping", true);
-        }
-        if (IsGrounded())
-        {
-            animator.SetBool("IsJumping", false);
-        };
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !IsGrounded())
+        //{
+        //    StartCoroutine(Dash());
+        //}
     }
 
     private void FixedUpdate() {
