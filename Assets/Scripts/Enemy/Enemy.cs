@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour
         //Disable the enemy
         GetComponent<Collider2D>().enabled = false;
         GetComponent <AIPath>().enabled = false;
-        //this.gameObject.SetActive(false);
         GetComponent<EnemyBehaviour>().enabled = false;
 
     }

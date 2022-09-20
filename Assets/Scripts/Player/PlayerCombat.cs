@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -32,8 +34,8 @@ public class PlayerCombat : MonoBehaviour
     }
 
     public void Attack(){
-        //if (Time.time >= nextAttackTime)
-        //{
+        if (Time.time >= nextAttackTime)
+        {
             //Play an attack animation
             animator.SetTrigger("Attack");
             //Detect enemies in range of attack
@@ -47,8 +49,8 @@ public class PlayerCombat : MonoBehaviour
                     enemyScript.GetComponent<Enemy>().TakeDamage(attackDamage);
                 }
             }
-        //}
-        //nextAttackTime = Time.time + 1f / attackRate;
+        }
+        nextAttackTime = Time.time + 1f / attackRate;
     }
 
     public void TakeDamage(int damage)
@@ -57,6 +59,19 @@ public class PlayerCombat : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+
+        Debug.Log("Player died!");
+        SceneManager.LoadScene("Deathscreen", LoadSceneMode.Single);
+
     }
 
     void OnDrawGizmosSelected() {

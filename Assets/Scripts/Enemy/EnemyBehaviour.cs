@@ -90,7 +90,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Cooldown();
             isDone = false;
-            anim.SetBool("Attack", false);
         }
     }
 
@@ -111,8 +110,9 @@ public class EnemyBehaviour : MonoBehaviour
         timer = intTimer; // Reset time when player enters attack Range
         attackMode = true; // To check if enemy can still attack or not
 
+        anim.SetTrigger("Attack");
         anim.SetBool("canWalk", false);
-        anim.SetBool("Attack", true);
+        TriggerCooling();
     }
 
     void Cooldown()
@@ -130,7 +130,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         cooling = false;
         attackMode = false;
-        anim.SetBool("Attack", false);
     }
 
     void RaycastDebugger()
