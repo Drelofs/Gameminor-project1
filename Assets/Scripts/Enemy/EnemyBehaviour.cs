@@ -37,7 +37,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (inRange)
         {
-            hit = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLength, raycastMask);
+            hit = Physics2D.Raycast(rayCast.position, -rayCast.right, rayCastLength, raycastMask);
             RaycastDebugger();
         }
 
@@ -96,15 +96,10 @@ public class EnemyBehaviour : MonoBehaviour
     void Move()
     {
         anim.SetBool("canWalk", true);
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_attack"))
-        {
-
-        }
     }
 
     void Attack()
     {
-        Debug.Log("Attacking!");
         playerCombat = player.GetComponent<PlayerCombat>();
         playerCombat.TakeDamage(20);
         timer = intTimer; // Reset time when player enters attack Range

@@ -15,11 +15,13 @@ public class EnemyGFX : MonoBehaviour
     {
         if(aiPath.desiredVelocity.x >= 0.01f)
         {
-            spriteRenderer.flipX = true;
+            //spriteRenderer.flipX = true;
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
         else if(aiPath.desiredVelocity.x <= -0.01f)
         {
-            spriteRenderer.flipX = false;
+            //spriteRenderer.flipX = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 }

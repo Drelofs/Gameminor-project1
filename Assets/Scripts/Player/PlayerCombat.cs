@@ -18,23 +18,29 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRange = 0.5f;
     public int attackDamage = 40;
-    public float attackRate = 2;
+    public float attackRate = 2f;
     public float nextAttackTime = 0f;
+
+    private bool canAttack;
 
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        canAttack = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.time >= nextAttackTime)
+        {
+            canAttack = true;
+        }
     }
 
     public void Attack(){
-        if (Time.time >= nextAttackTime)
+        if (canAttack)
         {
             //Play an attack animation
             animator.SetTrigger("Attack");
@@ -43,14 +49,15 @@ public class PlayerCombat : MonoBehaviour
             //Damage them
             foreach (Collider2D enemy in hitEnemies)
             {
-                Debug.Log("found enemy: " + enemy.gameObject.name, enemy.gameObject);
+                //Debug.Log("found enemy: " + enemy.gameObject.name, enemy.gameObject);
                 if (enemy.TryGetComponent<Enemy>(out Enemy enemyScript))
                 {
                     enemyScript.GetComponent<Enemy>().TakeDamage(attackDamage);
                 }
             }
+            nextAttackTime = Time.time + 1f / attackRate;
+            canAttack = false;
         }
-        nextAttackTime = Time.time + 1f / attackRate;
     }
 
     public void TakeDamage(int damage)
