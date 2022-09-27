@@ -64,6 +64,14 @@ public class PlayerMovement : MonoBehaviour
         //}
     }
 
+    public void ClickDash()
+    {
+        if (canDash)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
     private void FixedUpdate() {
         if (isDashing){
             return;

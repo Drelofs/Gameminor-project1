@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth = 50;
     public int currentHealth;
 
     public HealthBar healthBar;
@@ -26,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(maxHealth);
         canAttack = true;
     }
 
