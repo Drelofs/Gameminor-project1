@@ -73,6 +73,25 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    private void addHealth(int health)
+    {
+        currentHealth += health;
+        if(currentHealth >= 100)
+        {
+            currentHealth = 100;
+        }
+        healthBar.SetHealth(currentHealth);
+    }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.CompareTag("HealthPotion"))
+        {
+            addHealth(40);
+            Destroy(coll.gameObject);
+        }
+    }
+
     void Die()
     {
 
