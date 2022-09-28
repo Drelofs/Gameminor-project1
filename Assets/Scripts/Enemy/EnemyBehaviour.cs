@@ -80,7 +80,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (!isDone)
             {
-                Attack();
+                StartCoroutine(Attack(0.35f));
                 isDone = true;
             }
 
@@ -98,8 +98,9 @@ public class EnemyBehaviour : MonoBehaviour
         anim.SetBool("canWalk", true);
     }
 
-    void Attack()
+    IEnumerator Attack(float seconds)
     {
+        yield return new WaitForSeconds(seconds);
         playerCombat = player.GetComponent<PlayerCombat>();
         playerCombat.TakeDamage(20);
         timer = intTimer; // Reset time when player enters attack Range
