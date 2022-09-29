@@ -25,7 +25,11 @@ public class Enemy : MonoBehaviour
             //gameObject.SetActive(true);
             GetComponent<AIPath>().enabled = true;
             GetComponent<EnemyBehaviour>().enabled = true;
-            spawner.GetComponent<EnemySpawner>().playerDetected = false;
+            //spawner.GetComponent<EnemySpawner>().playerDetected = false;
+            if(spawner != null)
+            {
+                Destroy(spawner.gameObject);
+            }
         }
     }
 
