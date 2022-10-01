@@ -54,6 +54,10 @@ public class PlayerCombat : MonoBehaviour
                 {
                     enemyScript.GetComponent<Enemy>().TakeDamage(attackDamage);
                 }
+                if (enemy.TryGetComponent<FlyingEnemy>(out FlyingEnemy flyingEnemyScript))
+                {
+                    flyingEnemyScript.GetComponent<FlyingEnemy>().TakeDamage(attackDamage);
+                }
             }
             nextAttackTime = Time.time + 1f / attackRate;
             canAttack = false;

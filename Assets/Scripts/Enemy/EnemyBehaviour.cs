@@ -78,6 +78,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else if(attackDistance >= distance && cooling == false)
         {
+            Debug.Log("It's happening!");
             if (!isDone)
             {
                 StartCoroutine(Attack(0.35f));

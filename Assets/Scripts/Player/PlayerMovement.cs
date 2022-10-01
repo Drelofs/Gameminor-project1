@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private float dashingPower = 100f;
-    private float dashingTime = 0.2f;
+    private float dashingTime = 0.3f;
     private float dashingCooldown = 1f;
 
     [SerializeField] private Rigidbody2D rb;

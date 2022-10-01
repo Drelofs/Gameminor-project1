@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (spawner.GetComponent<EnemySpawner>().playerDetected)
+        if (spawner && spawner.GetComponent<EnemySpawner>().playerDetected)
         {
             Debug.Log("Enemy Spawning!");
             //gameObject.SetActive(true);
