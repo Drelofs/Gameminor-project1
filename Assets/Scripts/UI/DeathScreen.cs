@@ -13,6 +13,6 @@ public class DeathScreen : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }
