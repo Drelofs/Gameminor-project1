@@ -6,11 +6,6 @@ public class LevelChanger : MonoBehaviour
     public Animator anim;
 
     private string levelToLoad;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void FadeToLevel(string levelName)
     {

@@ -22,7 +22,6 @@ public class DoorCollider : MonoBehaviour
     {
         if (coll.CompareTag("Player"))
         {
-            Debug.Log("Open sesame!");
             anim.SetTrigger("PlayerDetected");
         }
     }
