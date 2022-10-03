@@ -58,10 +58,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        //if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !IsGrounded())
-        //{
-        //    StartCoroutine(Dash());
-        //}
     }
 
     public void ClickDash()
@@ -80,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool IsGrounded(){
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
     }
 
     private void Flip(){
