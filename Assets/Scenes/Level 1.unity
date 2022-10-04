@@ -9318,6 +9318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Enemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2698234148115973100, guid: e0a3b33d9061f47f5a68339d9b0993fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a3b33d9061f47f5a68339d9b0993fe, type: 3}
 --- !u!4 &1421729443 stripped
@@ -12317,11 +12321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2698234147228190925, guid: e0a3b33d9061f47f5a68339d9b0993fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.46
+      value: -13.04
       objectReference: {fileID: 0}
     - target: {fileID: 2698234147228190925, guid: e0a3b33d9061f47f5a68339d9b0993fe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.359545
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2698234147228190925, guid: e0a3b33d9061f47f5a68339d9b0993fe, type: 3}
       propertyPath: m_LocalRotation.w

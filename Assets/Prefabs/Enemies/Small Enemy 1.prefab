@@ -78,7 +78,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.41643038, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5155336
+  m_Radius: 0.71
 --- !u!1 &2698234147228190928
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2698234147228190927}
   - component: {fileID: 2698234147228190921}
   - component: {fileID: 2698234147228190918}
+  - component: {fileID: 9156901781333760724}
   m_Layer: 3
   m_Name: Small Enemy 1
   m_TagString: Untagged
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  anim: {fileID: 2698234148115973106}
+  anim: {fileID: 7926028844012425810}
   spawner: {fileID: 0}
 --- !u!114 &2698234147228190916
 MonoBehaviour:
@@ -206,7 +207,7 @@ MonoBehaviour:
   attackDistance: 2
   moveSpeed: 2
   timer: 2
-  anim: {fileID: 2698234148115973106}
+  anim: {fileID: 7926028844012425810}
 --- !u!114 &2698234147228190920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +305,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 2698234147228190927}
+--- !u!95 &9156901781333760724
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698234147228190928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2698234148115973105
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,8 +334,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2698234148115973100}
-  - component: {fileID: 2698234148115973106}
   - component: {fileID: 2698234148115973107}
+  - component: {fileID: 7926028844012425810}
   m_Layer: 3
   m_Name: EnemyGFX
   m_TagString: Untagged
@@ -330,33 +351,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2698234148115973105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.290002, z: -6}
+  m_LocalPosition: {x: -0.2, y: 0.85, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2698234147228190925}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2698234148115973106
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2698234148115973105}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bd00c6c7594b84935becde625ed6796c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &2698234148115973107
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -398,7 +399,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6951bdbb603654ecd9063cabdf8f0f5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 717a9cf1cf9e2a0408cae31f4a6528b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -409,6 +410,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7926028844012425810
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698234148115973105}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ec9901cd4dee974fad280ad0b6b0998, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2698234148178123238
 GameObject:
   m_ObjectHideFlags: 0

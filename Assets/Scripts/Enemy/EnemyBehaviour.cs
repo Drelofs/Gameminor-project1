@@ -53,7 +53,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if(inRange == false)
         {
-            anim.SetBool("canWalk", false);
+            //anim.SetBool("canWalk", false);
             StopAttack();
         }
     }
@@ -78,7 +78,6 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else if(attackDistance >= distance && cooling == false)
         {
-            Debug.Log("It's happening!");
             if (!isDone)
             {
                 StartCoroutine(Attack(0.35f));
@@ -96,7 +95,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Move()
     {
-        anim.SetBool("canWalk", true);
+        //anim.SetBool("canWalk", true);
     }
 
     IEnumerator Attack(float seconds)
@@ -108,7 +107,7 @@ public class EnemyBehaviour : MonoBehaviour
         attackMode = true; // To check if enemy can still attack or not
 
         anim.SetTrigger("Attack");
-        anim.SetBool("canWalk", false);
+        //anim.SetBool("canWalk", false);
         TriggerCooling();
     }
 

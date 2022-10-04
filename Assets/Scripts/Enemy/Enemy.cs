@@ -22,10 +22,8 @@ public class Enemy : MonoBehaviour
         if (spawner && spawner.GetComponent<EnemySpawner>().playerDetected)
         {
             Debug.Log("Enemy Spawning!");
-            //gameObject.SetActive(true);
             GetComponent<AIPath>().enabled = true;
             GetComponent<EnemyBehaviour>().enabled = true;
-            //spawner.GetComponent<EnemySpawner>().playerDetected = false;
             if(spawner != null)
             {
                 Destroy(spawner.gameObject);
@@ -37,7 +35,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
 
         //Play hurt animation
-        anim.SetBool("isHit", true);
+        anim.SetTrigger("isHit");
         if (currentHealth <= 0){
             Die();
         }
@@ -47,7 +45,7 @@ public class Enemy : MonoBehaviour
 
         Debug.Log("Enemy died!");
         //Die animation
-        anim.SetBool("isDead", true);
+        anim.SetTrigger("isDead");
         //Disable the enemy
         GetComponent<Collider2D>().enabled = false;
         GetComponent<AIPath>().enabled = false;

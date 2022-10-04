@@ -89,9 +89,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private IEnumerator Dash(){
+        animator.SetBool("IsJumping", false);
+        animator.SetTrigger("IsDashing");
         canDash = false;
         isDashing = true;
-        animator.SetTrigger("IsDashing");
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
