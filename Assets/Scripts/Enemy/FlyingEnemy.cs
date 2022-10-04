@@ -55,7 +55,6 @@ public class FlyingEnemy : MonoBehaviour
         currentHealth -= damage;
 
         //Play hurt animation
-        //anim.SetBool("isHit", true);
         if (currentHealth <= 0)
         {
             Die();
@@ -66,12 +65,10 @@ public class FlyingEnemy : MonoBehaviour
     {
         this.enabled = false;
 
-        //GetComponent<Collider2D>().enabled = false;
-        anim.SetTrigger("IsDead");
+        anim.SetTrigger("isDead");
         GetComponent<AIPath>().enabled = false;
         GetComponent<Rigidbody2D>().gravityScale = 1;
         GetComponent<FlyingEnemy>().enabled = false;
-        //GetComponentInChildren<SpriteRenderer>().enabled = false;
 
     }
 }
