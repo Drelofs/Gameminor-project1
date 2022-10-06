@@ -8,6 +8,7 @@ public class PlayerCombat : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    public bool godModeActivated;
 
     public HealthBar healthBar;
 
@@ -25,6 +26,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
+        godModeActivated = false;
         currentHealth = maxHealth;
         healthBar.SetHealth(maxHealth);
         canAttack = true;
@@ -36,6 +38,10 @@ public class PlayerCombat : MonoBehaviour
         if (Time.time >= nextAttackTime)
         {
             canAttack = true;
+        }
+        if (godModeActivated)
+        {
+            currentHealth = maxHealth;
         }
     }
 
@@ -66,14 +72,17 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        animator.SetTrigger("IsHurt");
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
-
-        if (currentHealth <= 0)
+        if (!godModeActivated)
         {
-            Die();
+            animator.SetTrigger("IsHurt");
+            currentHealth -= damage;
+
+            healthBar.SetHealth(currentHealth);
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 

@@ -191,6 +191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1739646952}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 8285989}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -249,10 +253,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (1)
+      value: FlyingEnemy 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &8285989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 8285988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &53323895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,7 +522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 84691449}
   joystick: {fileID: 1879819466}
-  button: {fileID: 0}
+  godMode: {fileID: 426587564}
   jumpingPower: 48
   rb: {fileID: 84691444}
   groundCheck: {fileID: 542383176}
@@ -529,6 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  godModeActivated: 0
   healthBar: {fileID: 104993689}
   animator: {fileID: 84691449}
   attackPoint: {fileID: 1744309427}
@@ -896,6 +912,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1628843588}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 127017107}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -954,10 +974,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (2)
+      value: FlyingEnemy 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &127017107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 127017106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &128260132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,6 +1342,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1401936191}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 315350897}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1369,10 +1404,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (1)
+      value: FlyingEnemy 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &315350897 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 315350896}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &315631670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1447,6 +1493,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1006954383}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 319690364}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1505,7 +1555,7 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy
+      value: FlyingEnemy 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
@@ -1514,6 +1564,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
   m_PrefabInstance: {fileID: 319690362}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &319690364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 319690362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &321573988 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8086552106610357584, guid: c311886bd564c497e81cab74927c8b9f, type: 3}
@@ -1557,6 +1618,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1401936191}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 353958950}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1615,10 +1680,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy
+      value: FlyingEnemy 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &353958950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 353958949}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &390796172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +1943,157 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
   m_PrefabInstance: {fileID: 127017106}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &426587564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 426587565}
+  - component: {fileID: 426587567}
+  - component: {fileID: 426587566}
+  - component: {fileID: 426587568}
+  m_Layer: 5
+  m_Name: GodMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &426587565
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426587564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 555102572}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
+  m_SizeDelta: {x: 740.5942, y: 284.2576}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &426587566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426587564}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: God Mode activated!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 72
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &426587567
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426587564}
+  m_CullTransparentMesh: 1
+--- !u!114 &426587568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426587564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132eba2a4a23045188c3e6f54f5b4311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 84691442}
+  healthbarFill: {fileID: 1069136308}
+  doingGodMode: 0
 --- !u!1 &430148909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8817701925852397422, guid: 53470a87a61c5478e9f203df1c75d5e4, type: 3}
@@ -2469,6 +2696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a772984c34d2c4ba68ab0b73d63dc091, type: 3}
+--- !u!224 &555102572 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2620112223285728449, guid: a772984c34d2c4ba68ab0b73d63dc091, type: 3}
+  m_PrefabInstance: {fileID: 555102571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &567506927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2697909980523101307, guid: 53470a87a61c5478e9f203df1c75d5e4, type: 3}
@@ -2632,6 +2864,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2114018259}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 617609322}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2690,10 +2926,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy
+      value: FlyingEnemy 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &617609322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 617609321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &629438804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6555,6 +6802,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1739646952}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 927747560}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6613,10 +6864,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy
+      value: FlyingEnemy 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &927747560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 927747559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &931066639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6624,6 +6886,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1739646952}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 931066640}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6682,10 +6948,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy
+      value: FlyingEnemy 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &931066640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 931066639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &937565820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8817701926011785069, guid: 53470a87a61c5478e9f203df1c75d5e4, type: 3}
@@ -6868,6 +7145,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 426587568}
+          m_TargetAssemblyTypeName: GodMode, Assembly-CSharp
+          m_MethodName: CountJumpButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &944307022 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8086552106610357584, guid: c311886bd564c497e81cab74927c8b9f, type: 3}
@@ -6880,6 +7169,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1628843588}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 955129484}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6938,10 +7231,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (1)
+      value: FlyingEnemy 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &955129484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 955129483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &965647593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7196,6 +7500,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 426587568}
+        m_TargetAssemblyTypeName: GodMode, Assembly-CSharp
+        m_MethodName: CountAttackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &981144766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7420,6 +7736,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 896683781}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 1032445314}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7478,10 +7798,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (1)
+      value: FlyingEnemy 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &1032445314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 1032445313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038442236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1173761254453286348, guid: c8e354947cc174b81b49f49c2475ca2e, type: 3}
@@ -7836,6 +8167,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1628843588}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 1084211660}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7894,10 +8229,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (3)
+      value: FlyingEnemy 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &1084211660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 1084211659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1090463659
 GameObject:
   m_ObjectHideFlags: 0
@@ -9510,6 +9856,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1628843588}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 1452423953}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -9568,10 +9918,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy
+      value: FlyingEnemy 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &1452423953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 1452423952}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1459620950
 GameObject:
   m_ObjectHideFlags: 0
@@ -10697,10 +11058,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 896683781}
     m_Modifications:
-    - target: {fileID: 2749542524489040186, guid: fe2c038092d284771b808348c712e5b6, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
       value: 
-      objectReference: {fileID: 21300000, guid: fd4a342a7ef20164ea3e580f521f628b, type: 3}
+      objectReference: {fileID: 1738980481}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10759,10 +11120,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy
+      value: FlyingEnemy 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &1738980481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 1738980480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1739646951
 GameObject:
   m_ObjectHideFlags: 0
@@ -11175,6 +11547,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1739646952}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 1880684026}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -11233,10 +11609,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (1)
+      value: FlyingEnemy 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &1880684026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 1880684025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1901246306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2620112221961978569, guid: a772984c34d2c4ba68ab0b73d63dc091, type: 3}
@@ -11323,6 +11710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1739646952}
     m_Modifications:
+    - target: {fileID: 2749542524489040185, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+      propertyPath: aiPath
+      value: 
+      objectReference: {fileID: 1938628540}
     - target: {fileID: 2749542525610095756, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -11381,10 +11772,21 @@ PrefabInstance:
       objectReference: {fileID: 84691446}
     - target: {fileID: 2749542525610095763, guid: fe2c038092d284771b808348c712e5b6, type: 3}
       propertyPath: m_Name
-      value: FlyingEnemy (2)
+      value: FlyingEnemy 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+--- !u!114 &1938628540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749542525610095761, guid: fe2c038092d284771b808348c712e5b6, type: 3}
+  m_PrefabInstance: {fileID: 1938628539}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1939194661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8817701926017294777, guid: 53470a87a61c5478e9f203df1c75d5e4, type: 3}

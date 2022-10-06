@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
     public Joystick joystick;
-    public Button button;
+    public GameObject godMode;
 
     private float horizontal;
     private float speed = 8f;
@@ -45,6 +45,14 @@ public class PlayerMovement : MonoBehaviour
         };
 
         Flip();
+
+        if(horizontal > 0.01f || horizontal < -0.01f)
+        {
+            if (!godMode.GetComponent<GodMode>().godModeActivated)
+            {
+                godMode.GetComponent<GodMode>().GodModeFailed();
+            }
+        }
     }
 
     public void Jump()
