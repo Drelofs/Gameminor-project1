@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     public GameObject godMode;
 
-    private float horizontal;
+    public float horizontal;
     private float speed = 8f;
     public float jumpingPower = 32f;
     private bool isFacingRight = true;
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(horizontal > 0.01f || horizontal < -0.01f)
         {
-            if (!godMode.GetComponent<GodMode>().godModeActivated)
+            if (!godMode.GetComponent<GodMode>().godModeActivated && godMode.GetComponent<GodMode>().doingGodMode)
             {
                 godMode.GetComponent<GodMode>().GodModeFailed();
             }

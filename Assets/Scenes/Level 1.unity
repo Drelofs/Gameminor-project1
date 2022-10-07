@@ -523,6 +523,7 @@ MonoBehaviour:
   animator: {fileID: 84691449}
   joystick: {fileID: 1879819466}
   godMode: {fileID: 426587564}
+  horizontal: 0
   jumpingPower: 48
   rb: {fileID: 84691444}
   groundCheck: {fileID: 542383176}
@@ -2094,6 +2095,8 @@ MonoBehaviour:
   player: {fileID: 84691442}
   healthbarFill: {fileID: 1069136308}
   doingGodMode: 0
+  numberOfPauses: 0
+  godModeActivated: 0
 --- !u!1 &430148909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8817701925852397422, guid: 53470a87a61c5478e9f203df1c75d5e4, type: 3}
@@ -12268,6 +12271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 646886536}
+  godMode: {fileID: 426587564}
 --- !u!224 &2075273388 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8086552106610357584, guid: c311886bd564c497e81cab74927c8b9f, type: 3}

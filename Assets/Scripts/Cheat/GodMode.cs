@@ -9,6 +9,7 @@ public class GodMode : MonoBehaviour
     public GameObject player;
     public GameObject healthbarFill;
     public bool doingGodMode = false;
+    public int numberOfPauses = 0;
 
     public bool godModeActivated = false;
     private int attackPressed = 0;
@@ -19,7 +20,7 @@ public class GodMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(attackDone && jumpDone)
+        if(attackDone && jumpDone && numberOfPauses == 5)
         {
             StartCoroutine(GodModeActivated());
             attackDone = false;
@@ -32,6 +33,7 @@ public class GodMode : MonoBehaviour
         if (!godModeActivated)
         {
             attackPressed++;
+            Debug.Log("Attack pressed: " + attackPressed);
             doingGodMode = true;
             if (attackPressed >= 5)
             {
@@ -43,6 +45,7 @@ public class GodMode : MonoBehaviour
     {
         if (!godModeActivated) {
             jumpPressed++;
+            Debug.Log("Jump pressed: " + jumpPressed);
             if (jumpPressed >= 5)
             {
                 jumpDone = true;
